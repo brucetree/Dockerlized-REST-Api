@@ -1,8 +1,6 @@
 import axios from "axios";
-// import getJsonData from "./app";
 
-// jest.mock("axios");
-const url = "http://127.0.0.1:3000";
+const url = "http://127.0.0.1:3000/stations";
 
 function isArrayOfObjectsAscending(arr, key) {
   for (let i = 1; i < arr.length; i++) {
@@ -44,18 +42,4 @@ describe("fetch data", () => {
     expect(doObjectsHaveKey(res.data, "long")).toBeTruthy();
   });
 
-  // test("handles API error with specific response", async () => {
-  //   const errorResponse = {
-  //     response: {
-  //       status: 503,
-  //       data: {
-  //         error: "Error Connecting to BOM.",
-  //       },
-  //     },
-  //   };
-
-  //   axios.get.mockRejectedValue(); // Mock the API error
-
-  //   await expect(getJsonData()).rejects.toEqual(errorResponse);
-  // });
 });
