@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://127.0.0.1:3000/stations";
+const url = "http://127.0.0.1:3000";
 
 function isArrayOfObjectsAscending(arr, key) {
   for (let i = 1; i < arr.length; i++) {
