@@ -34,7 +34,7 @@ describe("fetch data", () => {
     expect(isArrayOfObjectsAscending(res.data, "apparent_t")).toBeTruthy();
   });
 
-  test("fetched data should be have name, apparent_t,lat and long ", async () => {
+  test("fetched data should have name, apparent_t, lat and long ", async () => {
     const res = await axios.get(url);
     expect(doObjectsHaveKey(res.data, "apparent_t")).toBeTruthy();
     expect(doObjectsHaveKey(res.data, "name")).toBeTruthy();
