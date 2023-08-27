@@ -7,7 +7,7 @@ const app = express();
 //  handle Cross-Origin Resource Sharing (CORS)
 app.use(
   cors({
-      origin: "http://localhost:3000", 
+      origin: ["http://localhost:3000", "https://coding-challenges69-6e9ad87f3454.herokuapp.com/"],
       credentials: true,
       methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
   })
