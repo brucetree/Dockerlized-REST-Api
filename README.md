@@ -11,7 +11,7 @@ Also can go to swagger UI to check api documents
 
 Get stations ``` https://coding-challenges69-6e9ad87f3454.herokuapp.com/ ```
 
-
+Swagger ``` https://coding-challenges69-6e9ad87f3454.herokuapp.com/api-docs ```
 ### local routes
 
 Get stations ``` http://localhost:3000 ```
@@ -30,6 +30,7 @@ Swagger ``` http://localhost:3000/api-docs ```
 Kafka is an open-source stream-processing software platform.It's widely used to create scalable and fault-tolerant data pipelines. Kafka follows a publish-subscribe model, making it an effective solution for handling high-volume, low-delay data streams
 
 Key terminologies:
+
 Topic: a category or channel where data records which are sent by producers and consumed by consumers
 
 Producer: a sender application that writes data records to Kafka topics
