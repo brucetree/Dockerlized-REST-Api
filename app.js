@@ -33,7 +33,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/",
+        url: "https://coding-challenges69-6e9ad87f3454.herokuapp.com/",
       },
     ],
   },
