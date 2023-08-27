@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(express.json());
 
+// handle Cross-Origin Resource Sharing (CORS) headers
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -41,6 +42,7 @@ const options = {
 };
 
 const spacs = swaggerJSDoc(options);
+// 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spacs));
 
 app.listen(port, () => {
