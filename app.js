@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(express.json());
 
-//  handle Cross-Origin Resource Sharing (CORS)
+//  handle Cross-Origin Resource Sharing
 app.use((req,res,next)=>{
   res.setHeader('Access-Control-Allow-Origin','*');
   res.setHeader(
