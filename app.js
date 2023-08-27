@@ -9,16 +9,27 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin,X-Requested-With,Content-Type,Accept,Authorization"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PATCH,DELETE");
+  next();
+});
+
 // define routes
 app.use("/", router);
 
 const options = {
   definition: {
     openapi: "3.0.0",
-    info:{
-      title:"Stations api doc",
-      version:"0.1",
-      description:"This is the station api doc made with Express and documented with Swagger"
+    info: {
+      title: "Stations api doc",
+      version: "0.1",
+      description:
+        "This is the station api doc made with Express and documented with Swagger",
     },
     servers: [
       {
