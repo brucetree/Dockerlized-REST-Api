@@ -2,6 +2,7 @@ import axios from "axios";
 
 const url = "http://127.0.0.1:3000";
 
+// function to check array of object ascending order
 function isArrayOfObjectsAscending(arr, key) {
   for (let i = 1; i < arr.length; i++) {
     if (arr[i][key] < arr[i - 1][key]) {
@@ -12,6 +13,7 @@ function isArrayOfObjectsAscending(arr, key) {
   return true;
 }
 
+// function to check object have a specific key
 function doObjectsHaveKey(arr, key) {
   for (const obj of arr) {
     if (!(key in obj)) {

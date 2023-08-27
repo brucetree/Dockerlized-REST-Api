@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 // define routes
 app.use("/", router);
 
+// Swagger Ui options
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -42,7 +43,7 @@ const options = {
 };
 
 const spacs = swaggerJSDoc(options);
-// 
+// Swagger UI routes
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spacs));
 
 app.listen(port, () => {
