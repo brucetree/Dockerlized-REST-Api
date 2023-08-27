@@ -11,7 +11,6 @@ Also can go to swagger UI to check api documents
 
 Get stations ``` https://coding-challenges69-6e9ad87f3454.herokuapp.com/ ```
 
-Swagger ``` https://coding-challenges69-6e9ad87f3454.herokuapp.com/api-docs ```
 
 ### local routes
 
