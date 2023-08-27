@@ -2,7 +2,7 @@ import express from "express";
 import router from "./routes/stations-route.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import cors from "cors";
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -10,20 +10,14 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 //  handle Cross-Origin Resource Sharing (CORS)
-var corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials : true
- }
-app.use(cors(corsOptions));
-app.use((req, res, next) => {
-  res.header('Access-Control-Expose-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin','*');
+  res.setHeader(
+      'Access-Control-Allow-Headers',
+      'Origin,X-Requested-With,Content-Type,Accept,Authorization'
+  )
+  res.setHeader('Access-Control-Allow-Methods','GET,POST,PATCH,DELETE')
+  next()
 })
 
 // define routes
