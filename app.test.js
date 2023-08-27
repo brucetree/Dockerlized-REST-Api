@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = "http://127.0.0.1:3000";
+const port = process.env.PORT || 3000;
+const url = `http://127.0.0.1:${port}`;
 
 // function to check array of object ascending order
 function isArrayOfObjectsAscending(arr, key) {
@@ -43,5 +44,4 @@ describe("fetch data", () => {
     expect(doObjectsHaveKey(res.data, "lat")).toBeTruthy();
     expect(doObjectsHaveKey(res.data, "long")).toBeTruthy();
   });
-
 });
