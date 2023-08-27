@@ -5,7 +5,12 @@ import swaggerUi from "swagger-ui-express";
 import cors from 'cors';
 const app = express();
 //  handle Cross-Origin Resource Sharing (CORS)
-app.use(cors()); 
+app.use(
+  cors({
+      origin: "http://localhost:3000", 
+      credentials: true,
+  })
+);
 const port = process.env.PORT || 3000;
 
 // middleware
